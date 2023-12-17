@@ -173,7 +173,38 @@
           <div class="col-md-9 order-md-1">
 
             <!-- Form -->
-            <form class="block-decoration-2" id="contactForm">
+            <!-- <form class="block-decoration-2" id="contactForm"> -->
+
+              <!-- Contact number (hidden) -->
+              <!-- <input type="hidden" name="contact_number"> -->
+
+              <!-- Name -->
+              <!-- <div class="mb-3">
+                <label class="visually-hidden" for="user_name">Full name</label>
+                <input class="form-control" id="user_name" name="user_name" type="text" placeholder="Full name" required />
+              </div> -->
+
+              <!-- Email -->
+              <!-- <div class="mb-3">
+                <label class="visually-hidden" for="user_email">E-mail address</label>
+                <input class="form-control" id="user_email" name="user_email" type="email" placeholder="E-mail address" required />
+              </div> -->
+
+              <!-- Message -->
+              <!-- <div class="mb-3">
+                <label class="visually-hidden" for="message">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="9" placeholder="Message" required></textarea>
+              </div> -->
+
+              <!-- Button -->
+              <!-- <button class="btn btn-outline-primary" type="submit">
+                Send message
+              </button>
+
+            </form> -->
+
+            <!-- Form -->
+            <form onsubmit="emailSend(); reset(); return false;" class="block-decoration-2" id="contactForm">
 
               <!-- Contact number (hidden) -->
               <input type="hidden" name="contact_number">
@@ -200,9 +231,12 @@
               <button class="btn btn-outline-primary" type="submit">
                 Send message
               </button>
-
             </form>
 
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+	<script src="./assets/js/contact.js"></script>
           </div>
         </div>
       </div>
